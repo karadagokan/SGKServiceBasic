@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.com" xmlns:impl="http://service.com" xmlns:intf="http://service.com" xmlns:tns2="http://model.vizite.ws.sgk.com" xmlns:tns3="http://bean.vizite.ws.sgk.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://model.vizite.ws.sgk.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.vizite.ws.sgk.com"/>
+   <element name="isverenIletisimBilgileriResponse">
+    <complexType>
+     <sequence>
+      <element name="isverenIletisimBilgileriReturn" nillable="true" type="tns2:Cevap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiGoruntu">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiGoruntuResponse">
+    <complexType>
+     <sequence>
+      <element name="manuelCalismazlikBildirimiGoruntuReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiSil">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="id" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiSilResponse">
+    <complexType>
+     <sequence>
+      <element name="manuelCalismazlikBildirimiSilReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="destroy">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="destroyResponse">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguTarihle">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tarih" nillable="true" type="xsd:string"/>
+      <element name="tarih2" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguTarihleResponse">
+    <complexType>
+     <sequence>
+      <element name="hasIsKazSorguTarihleReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiGiris">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+      <element name="raporBaslangicTarihi" nillable="true" type="xsd:string"/>
+      <element name="iseBaslamaTarihi" nillable="true" type="xsd:string"/>
+      <element name="nitelikDurumu" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="manuelCalismazlikBildirimiGirisResponse">
+    <complexType>
+     <sequence>
+      <element name="manuelCalismazlikBildirimiGirisReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporAramaTarihile">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tarih" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporAramaTarihileResponse">
+    <complexType>
+     <sequence>
+      <element name="raporAramaTarihileReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguTCile">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguTCileResponse">
+    <complexType>
+     <sequence>
+      <element name="hasIsKazSorguTCileReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="wsLogin">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="isyeriSifresi" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="wsLoginResponse">
+    <complexType>
+     <sequence>
+      <element name="wsLoginReturn" nillable="true" type="tns2:CevapLogin"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporAramaKimlikNo">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporAramaKimlikNoResponse">
+    <complexType>
+     <sequence>
+      <element name="raporAramaKimlikNoReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="init">
+    <complexType>
+     <sequence>
+      <element name="context" nillable="true" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="initResponse">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="raporOnay">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+      <element name="vaka" nillable="true" type="xsd:string"/>
+      <element name="medulaRaporId" nillable="true" type="xsd:string"/>
+      <element name="nitelikDurumu" nillable="true" type="xsd:string"/>
+      <element name="tarih" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporOnayResponse">
+    <complexType>
+     <sequence>
+      <element name="raporOnayReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="onaylIptal">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="medulaRaporId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="onaylIptalResponse">
+    <complexType>
+     <sequence>
+      <element name="onaylIptalReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguKapat">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="bildirimId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="hasIsKazSorguKapatResponse">
+    <complexType>
+     <sequence>
+      <element name="hasIsKazSorguKapatReturn" nillable="true" type="tns2:Cevap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="personelimDegildir">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tckNo" nillable="true" type="xsd:string"/>
+      <element name="vaka" nillable="true" type="xsd:string"/>
+      <element name="medulaRaporId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="personelimDegildirResponse">
+    <complexType>
+     <sequence>
+      <element name="personelimDegildirReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isverenIletisimBilgileriGoruntu">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isverenIletisimBilgileriGoruntuResponse">
+    <complexType>
+     <sequence>
+      <element name="isverenIletisimBilgileriGoruntuReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="onayliRaporlarTarihile">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="tarih1" nillable="true" type="xsd:string"/>
+      <element name="tarih2" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="onayliRaporlarTarihileResponse">
+    <complexType>
+     <sequence>
+      <element name="onayliRaporlarTarihileReturn" nillable="true" type="tns2:CevapRapor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporOkunduKapat">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="medulaRaporId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="raporOkunduKapatResponse">
+    <complexType>
+     <sequence>
+      <element name="raporOkunduKapatReturn" nillable="true" type="tns2:Cevap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isverenIletisimBilgileri">
+    <complexType>
+     <sequence>
+      <element name="kullaniciAdi" nillable="true" type="xsd:string"/>
+      <element name="isyeriKodu" nillable="true" type="xsd:string"/>
+      <element name="wsToken" nillable="true" type="xsd:string"/>
+      <element name="cepTel" nillable="true" type="xsd:string"/>
+      <element name="eposta" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://model.vizite.ws.sgk.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns3="http://bean.vizite.ws.sgk.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://bean.vizite.ws.sgk.com"/>
+   <complexType name="Cevap">
+    <sequence>
+     <element name="sonucKod" type="xsd:int"/>
+     <element name="sonucAciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="CevapRapor">
+    <complexContent>
+     <extension base="tns2:Cevap">
+      <sequence>
+       <element name="isKazasiHastaneBilgiBeanArray" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_IsKazasiHastaneBilgiBean"/>
+       <element name="hastaneBildirimiIsKazasiBean" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_HastaneBildirimiIsKazasiBean"/>
+       <element name="isverenIletisimBilgiBean" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_IsverenIletisimBilgiBean"/>
+       <element name="onayliRaporlarTarihleBeanArray" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_OnayliRaporlarTarihleBean"/>
+       <element name="raporAramaTarihleBeanArray" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_RaporAramaTarihleBean"/>
+       <element name="manuelCalismazlikBean" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_ManuelCalismazlikBean"/>
+       <element name="tarihSorguBean" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_TarihSorguBean"/>
+       <element name="raporBeanArray" nillable="true" type="tns2:ArrayOf_932239748_967665113_nillable_RaporBean"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_IsKazasiHastaneBilgiBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="IsKazasiHastaneBilgiBean" nillable="true" type="tns3:IsKazasiHastaneBilgiBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_HastaneBildirimiIsKazasiBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="HastaneBildirimiIsKazasiBean" nillable="true" type="tns3:HastaneBildirimiIsKazasiBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_IsverenIletisimBilgiBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="IsverenIletisimBilgiBean" nillable="true" type="tns3:IsverenIletisimBilgiBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_OnayliRaporlarTarihleBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="OnayliRaporlarTarihleBean" nillable="true" type="tns3:OnayliRaporlarTarihleBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_RaporAramaTarihleBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="RaporAramaTarihleBean" nillable="true" type="tns3:RaporAramaTarihleBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_ManuelCalismazlikBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ManuelCalismazlikBean" nillable="true" type="tns3:ManuelCalismazlikBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_TarihSorguBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="TarihSorguBean" nillable="true" type="tns3:TarihSorguBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_932239748_967665113_nillable_RaporBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="RaporBean" nillable="true" type="tns3:RaporBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="CevapLogin">
+    <complexContent>
+     <extension base="tns2:Cevap">
+      <sequence>
+       <element name="wsToken" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://bean.vizite.ws.sgk.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="IsKazasiHastaneBilgiBean">
+    <sequence>
+     <element name="BILDIRIMID" nillable="true" type="xsd:string"/>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="CINSIYET" nillable="true" type="xsd:string"/>
+     <element name="PROVIZYONTARIHI" nillable="true" type="xsd:string"/>
+     <element name="TESISADI" nillable="true" type="xsd:string"/>
+     <element name="UNVANI" nillable="true" type="xsd:string"/>
+     <element name="ISLEMTUR" nillable="true" type="xsd:string"/>
+     <element name="GIBSUBENO" nillable="true" type="xsd:string"/>
+     <element name="ISKAZASITARIHI" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HastaneBildirimiIsKazasiBean">
+    <sequence>
+     <element name="BILDIRIMID" nillable="true" type="xsd:string"/>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="CINSIYET" nillable="true" type="xsd:string"/>
+     <element name="PROVIZYONTARIHI" nillable="true" type="xsd:string"/>
+     <element name="TESISADI" nillable="true" type="xsd:string"/>
+     <element name="UNVANI" nillable="true" type="xsd:string"/>
+     <element name="ISLEMTUR" nillable="true" type="xsd:string"/>
+     <element name="GIBSUBENO" nillable="true" type="xsd:string"/>
+     <element name="ISKAZASITARIHI" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="IsverenIletisimBilgiBean">
+    <sequence>
+     <element name="eposta" nillable="true" type="xsd:string"/>
+     <element name="tel" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="OnayliRaporlarTarihleBean">
+    <sequence>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="AD" nillable="true" type="xsd:string"/>
+     <element name="SOYAD" nillable="true" type="xsd:string"/>
+     <element name="MEDULARAPORID" nillable="true" type="xsd:string"/>
+     <element name="RAPORTAKIPNO" nillable="true" type="xsd:string"/>
+     <element name="RAPORSIRANO" nillable="true" type="xsd:string"/>
+     <element name="POLIKLINIKTAR" nillable="true" type="xsd:string"/>
+     <element name="ISBASKONTTAR" nillable="true" type="xsd:string"/>
+     <element name="ISKAZASITARIHI" nillable="true" type="xsd:string"/>
+     <element name="VAKA" nillable="true" type="xsd:string"/>
+     <element name="VAKAADI" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RaporAramaTarihleBean">
+    <sequence>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="AD" nillable="true" type="xsd:string"/>
+     <element name="SOYAD" nillable="true" type="xsd:string"/>
+     <element name="MEDULARAPORID" nillable="true" type="xsd:string"/>
+     <element name="RAPORTAKIPNO" nillable="true" type="xsd:string"/>
+     <element name="RAPORSIRANO" nillable="true" type="xsd:string"/>
+     <element name="POLIKLINIKTAR" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBASTAR" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBITTAR" nillable="true" type="xsd:string"/>
+     <element name="ABASTAR" nillable="true" type="xsd:string"/>
+     <element name="ABITTAR" nillable="true" type="xsd:string"/>
+     <element name="ISBASKONTTAR" nillable="true" type="xsd:string"/>
+     <element name="ISKAZASITARIHI" nillable="true" type="xsd:string"/>
+     <element name="RAPORDURUMU" nillable="true" type="xsd:string"/>
+     <element name="VAKA" nillable="true" type="xsd:string"/>
+     <element name="VAKAADI" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ManuelCalismazlikBean">
+    <sequence>
+     <element name="ID" nillable="true" type="xsd:string"/>
+     <element name="mesaj" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="istenAyrTarih" nillable="true" type="xsd:string"/>
+     <element name="iseDonusTarih" nillable="true" type="xsd:string"/>
+     <element name="islemTar" nillable="true" type="xsd:string"/>
+     <element name="adi" nillable="true" type="xsd:string"/>
+     <element name="soyadi" nillable="true" type="xsd:string"/>
+     <element name="nitelikDurumu" nillable="true" type="xsd:string"/>
+     <element name="nitelikBitisTarihi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TarihSorguBean">
+    <sequence>
+     <element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBITTAR" nillable="true" type="xsd:string"/>
+     <element name="MEDULARAPORID" nillable="true" type="xsd:string"/>
+     <element name="RAPORTAKIPNO" nillable="true" type="xsd:string"/>
+     <element name="RAPORSIRANO" nillable="true" type="xsd:string"/>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="SIGORTALIADSOYAD" nillable="true" type="xsd:string"/>
+     <element name="ABASTAR" nillable="true" type="xsd:string"/>
+     <element name="ABITTAR" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBASTAR" nillable="true" type="xsd:string"/>
+     <element name="YATISDEVAM" nillable="true" type="xsd:string"/>
+     <element name="ISBASKONTTAR" nillable="true" type="xsd:string"/>
+     <element name="VAKA" nillable="true" type="xsd:string"/>
+     <element name="VAKAADI" nillable="true" type="xsd:string"/>
+     <element name="POLDEFTERSIRANO" nillable="true" type="xsd:string"/>
+     <element name="POLIKLINIKTAR" nillable="true" type="xsd:string"/>
+     <element name="RAPORDURUMU" nillable="true" type="xsd:string"/>
+     <element name="RAPORDURUMADI" nillable="true" type="xsd:string"/>
+     <element name="RAPDUZENTURU" nillable="true" type="xsd:string"/>
+     <element name="RAPDUZENTURUADI" nillable="true" type="xsd:string"/>
+     <element name="TESISKODU" nillable="true" type="xsd:string"/>
+     <element name="BRANSKODU" nillable="true" type="xsd:string"/>
+     <element name="BASHEKIMONAYTARIHI" nillable="true" type="xsd:string"/>
+     <element name="TESISADI" nillable="true" type="xsd:string"/>
+     <element name="RAPORBITTAR" nillable="true" type="xsd:string"/>
+     <element name="ISVERENID" nillable="true" type="xsd:string"/>
+     <element name="MAHIYET" nillable="true" type="xsd:string"/>
+     <element name="EKRANTARIHI" nillable="true" type="xsd:string"/>
+     <element name="ISLEMTARIHI" nillable="true" type="xsd:string"/>
+     <element name="SIGORTALITURU" nillable="true" type="xsd:string"/>
+     <element name="ISYERINO" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RaporBean">
+    <sequence>
+     <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+     <element name="AD" nillable="true" type="xsd:string"/>
+     <element name="SOYAD" nillable="true" type="xsd:string"/>
+     <element name="MEDULARAPORID" nillable="true" type="xsd:string"/>
+     <element name="RAPORTAKIPNO" nillable="true" type="xsd:string"/>
+     <element name="RAPORSIRANO" nillable="true" type="xsd:string"/>
+     <element name="POLIKLINIKTAR" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBASTAR" nillable="true" type="xsd:string"/>
+     <element name="YATRAPBITTAR" nillable="true" type="xsd:string"/>
+     <element name="ABASTAR" nillable="true" type="xsd:string"/>
+     <element name="ABITTAR" nillable="true" type="xsd:string"/>
+     <element name="ISBASKONTTAR" nillable="true" type="xsd:string"/>
+     <element name="DOGUMONCBASTAR" nillable="true" type="xsd:string"/>
+     <element name="RAPORBITTAR" nillable="true" type="xsd:string"/>
+     <element name="ISKAZASITARIHI" nillable="true" type="xsd:string"/>
+     <element name="ISVERENEBILDIRILDIGITARIH" nillable="true" type="xsd:string"/>
+     <element name="RAPORDURUMU" nillable="true" type="xsd:string"/>
+     <element name="BASHEKIMONAYTARIHI" nillable="true" type="xsd:string"/>
+     <element name="VAKA" nillable="true" type="xsd:string"/>
+     <element name="VAKAADI" nillable="true" type="xsd:string"/>
+     <element name="TESISKODU" nillable="true" type="xsd:string"/>
+     <element name="TESISADI" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="onaylIptalResponse">
+    <wsdl:part element="impl:onaylIptalResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isverenIletisimBilgileriGoruntuResponse">
+    <wsdl:part element="impl:isverenIletisimBilgileriGoruntuResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporOnayResponse">
+    <wsdl:part element="impl:raporOnayResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="onayliRaporlarTarihileResponse">
+    <wsdl:part element="impl:onayliRaporlarTarihileResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="onaylIptalRequest">
+    <wsdl:part element="impl:onaylIptal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="personelimDegildirResponse">
+    <wsdl:part element="impl:personelimDegildirResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguKapatRequest">
+    <wsdl:part element="impl:hasIsKazSorguKapat" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiSilResponse">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiSilResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporOnayRequest">
+    <wsdl:part element="impl:raporOnay" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguTarihleRequest">
+    <wsdl:part element="impl:hasIsKazSorguTarihle" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguKapatResponse">
+    <wsdl:part element="impl:hasIsKazSorguKapatResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isverenIletisimBilgileriGoruntuRequest">
+    <wsdl:part element="impl:isverenIletisimBilgileriGoruntu" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiGoruntuRequest">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiGoruntu" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguTCileResponse">
+    <wsdl:part element="impl:hasIsKazSorguTCileResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporOkunduKapatResponse">
+    <wsdl:part element="impl:raporOkunduKapatResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporAramaKimlikNoResponse">
+    <wsdl:part element="impl:raporAramaKimlikNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initRequest">
+    <wsdl:part element="impl:init" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporAramaTarihileRequest">
+    <wsdl:part element="impl:raporAramaTarihile" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isverenIletisimBilgileriResponse">
+    <wsdl:part element="impl:isverenIletisimBilgileriResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiGoruntuResponse">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiGoruntuResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporOkunduKapatRequest">
+    <wsdl:part element="impl:raporOkunduKapat" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiSilRequest">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiSil" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wsLoginRequest">
+    <wsdl:part element="impl:wsLogin" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiGirisResponse">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiGirisResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguTCileRequest">
+    <wsdl:part element="impl:hasIsKazSorguTCile" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initResponse">
+    <wsdl:part element="impl:initResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporAramaTarihileResponse">
+    <wsdl:part element="impl:raporAramaTarihileResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasIsKazSorguTarihleResponse">
+    <wsdl:part element="impl:hasIsKazSorguTarihleResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wsLoginResponse">
+    <wsdl:part element="impl:wsLoginResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isverenIletisimBilgileriRequest">
+    <wsdl:part element="impl:isverenIletisimBilgileri" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="personelimDegildirRequest">
+    <wsdl:part element="impl:personelimDegildir" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="raporAramaKimlikNoRequest">
+    <wsdl:part element="impl:raporAramaKimlikNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="onayliRaporlarTarihileRequest">
+    <wsdl:part element="impl:onayliRaporlarTarihile" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="manuelCalismazlikBildirimiGirisRequest">
+    <wsdl:part element="impl:manuelCalismazlikBildirimiGiris" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyResponse">
+    <wsdl:part element="impl:destroyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyRequest">
+    <wsdl:part element="impl:destroy" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ViziteGonder">
+    <wsdl:operation name="isverenIletisimBilgileri">
+      <wsdl:input message="impl:isverenIletisimBilgileriRequest" name="isverenIletisimBilgileriRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:isverenIletisimBilgileriResponse" name="isverenIletisimBilgileriResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiGoruntu">
+      <wsdl:input message="impl:manuelCalismazlikBildirimiGoruntuRequest" name="manuelCalismazlikBildirimiGoruntuRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:manuelCalismazlikBildirimiGoruntuResponse" name="manuelCalismazlikBildirimiGoruntuResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiSil">
+      <wsdl:input message="impl:manuelCalismazlikBildirimiSilRequest" name="manuelCalismazlikBildirimiSilRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:manuelCalismazlikBildirimiSilResponse" name="manuelCalismazlikBildirimiSilResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="destroy">
+      <wsdl:input message="impl:destroyRequest" name="destroyRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:destroyResponse" name="destroyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguTarihle">
+      <wsdl:input message="impl:hasIsKazSorguTarihleRequest" name="hasIsKazSorguTarihleRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:hasIsKazSorguTarihleResponse" name="hasIsKazSorguTarihleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiGiris">
+      <wsdl:input message="impl:manuelCalismazlikBildirimiGirisRequest" name="manuelCalismazlikBildirimiGirisRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:manuelCalismazlikBildirimiGirisResponse" name="manuelCalismazlikBildirimiGirisResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporAramaTarihile">
+      <wsdl:input message="impl:raporAramaTarihileRequest" name="raporAramaTarihileRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:raporAramaTarihileResponse" name="raporAramaTarihileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguTCile">
+      <wsdl:input message="impl:hasIsKazSorguTCileRequest" name="hasIsKazSorguTCileRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:hasIsKazSorguTCileResponse" name="hasIsKazSorguTCileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLogin">
+      <wsdl:input message="impl:wsLoginRequest" name="wsLoginRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:wsLoginResponse" name="wsLoginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporAramaKimlikNo">
+      <wsdl:input message="impl:raporAramaKimlikNoRequest" name="raporAramaKimlikNoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:raporAramaKimlikNoResponse" name="raporAramaKimlikNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="init">
+      <wsdl:input message="impl:initRequest" name="initRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:initResponse" name="initResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporOnay">
+      <wsdl:input message="impl:raporOnayRequest" name="raporOnayRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:raporOnayResponse" name="raporOnayResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onaylIptal">
+      <wsdl:input message="impl:onaylIptalRequest" name="onaylIptalRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:onaylIptalResponse" name="onaylIptalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguKapat">
+      <wsdl:input message="impl:hasIsKazSorguKapatRequest" name="hasIsKazSorguKapatRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:hasIsKazSorguKapatResponse" name="hasIsKazSorguKapatResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="personelimDegildir">
+      <wsdl:input message="impl:personelimDegildirRequest" name="personelimDegildirRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:personelimDegildirResponse" name="personelimDegildirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isverenIletisimBilgileriGoruntu">
+      <wsdl:input message="impl:isverenIletisimBilgileriGoruntuRequest" name="isverenIletisimBilgileriGoruntuRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:isverenIletisimBilgileriGoruntuResponse" name="isverenIletisimBilgileriGoruntuResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onayliRaporlarTarihile">
+      <wsdl:input message="impl:onayliRaporlarTarihileRequest" name="onayliRaporlarTarihileRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:onayliRaporlarTarihileResponse" name="onayliRaporlarTarihileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporOkunduKapat">
+      <wsdl:input message="impl:raporOkunduKapatRequest" name="raporOkunduKapatRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:raporOkunduKapatResponse" name="raporOkunduKapatResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ViziteGonderSoapBinding" type="impl:ViziteGonder">
+<wsaw:UsingAddressing wsdl:required="false"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="isverenIletisimBilgileri">
+      <wsdlsoap:operation soapAction="isverenIletisimBilgileri"/>
+      <wsdl:input name="isverenIletisimBilgileriRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isverenIletisimBilgileriResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiGoruntu">
+      <wsdlsoap:operation soapAction="manuelCalismazlikBildirimiGoruntu"/>
+      <wsdl:input name="manuelCalismazlikBildirimiGoruntuRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="manuelCalismazlikBildirimiGoruntuResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiSil">
+      <wsdlsoap:operation soapAction="manuelCalismazlikBildirimiSil"/>
+      <wsdl:input name="manuelCalismazlikBildirimiSilRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="manuelCalismazlikBildirimiSilResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="destroy">
+      <wsdlsoap:operation soapAction="destroy"/>
+      <wsdl:input name="destroyRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="destroyResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguTarihle">
+      <wsdlsoap:operation soapAction="hasIsKazSorguTarihle"/>
+      <wsdl:input name="hasIsKazSorguTarihleRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hasIsKazSorguTarihleResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manuelCalismazlikBildirimiGiris">
+      <wsdlsoap:operation soapAction="manuelCalismazlikBildirimiGiris"/>
+      <wsdl:input name="manuelCalismazlikBildirimiGirisRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="manuelCalismazlikBildirimiGirisResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporAramaTarihile">
+      <wsdlsoap:operation soapAction="raporAramaTarihile"/>
+      <wsdl:input name="raporAramaTarihileRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="raporAramaTarihileResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguTCile">
+      <wsdlsoap:operation soapAction="hasIsKazSorguTCile"/>
+      <wsdl:input name="hasIsKazSorguTCileRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hasIsKazSorguTCileResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLogin">
+      <wsdlsoap:operation soapAction="wsLogin"/>
+      <wsdl:input name="wsLoginRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="wsLoginResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporAramaKimlikNo">
+      <wsdlsoap:operation soapAction="raporAramaKimlikNo"/>
+      <wsdl:input name="raporAramaKimlikNoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="raporAramaKimlikNoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="init">
+      <wsdlsoap:operation soapAction="init"/>
+      <wsdl:input name="initRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="initResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporOnay">
+      <wsdlsoap:operation soapAction="raporOnay"/>
+      <wsdl:input name="raporOnayRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="raporOnayResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onaylIptal">
+      <wsdlsoap:operation soapAction="onaylIptal"/>
+      <wsdl:input name="onaylIptalRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="onaylIptalResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasIsKazSorguKapat">
+      <wsdlsoap:operation soapAction="hasIsKazSorguKapat"/>
+      <wsdl:input name="hasIsKazSorguKapatRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hasIsKazSorguKapatResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="personelimDegildir">
+      <wsdlsoap:operation soapAction="personelimDegildir"/>
+      <wsdl:input name="personelimDegildirRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="personelimDegildirResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isverenIletisimBilgileriGoruntu">
+      <wsdlsoap:operation soapAction="isverenIletisimBilgileriGoruntu"/>
+      <wsdl:input name="isverenIletisimBilgileriGoruntuRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isverenIletisimBilgileriGoruntuResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onayliRaporlarTarihile">
+      <wsdlsoap:operation soapAction="onayliRaporlarTarihile"/>
+      <wsdl:input name="onayliRaporlarTarihileRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="onayliRaporlarTarihileResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raporOkunduKapat">
+      <wsdlsoap:operation soapAction="raporOkunduKapat"/>
+      <wsdl:input name="raporOkunduKapatRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="raporOkunduKapatResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ViziteGonderService">
+    <wsdl:port binding="impl:ViziteGonderSoapBinding" name="ViziteGonder">
+      <wsdlsoap:address location="http://uyg.sgk.gov.tr:80/Ws_Vizite/services/ViziteGonder"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
